@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 918d78b3df9474a099ec582dda2b26bf
+timeCreated: 1492808766
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 'Sketch '
+  fontNames:
+  - 'Sketch '
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
