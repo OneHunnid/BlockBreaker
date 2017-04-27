@@ -15,7 +15,6 @@ public class Brick : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isBreakable = (this.tag == "breakable");
-		// keep track of breakable bricks
 		if (isBreakable) {
 			breakableCount++;
 		}
