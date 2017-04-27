@@ -1,10 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-	public Paddle paddle;
+	private Paddle paddle;
+
 	public Rigidbody2D rigid2D;
 	public Vector2 velocity;
 
@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		paddle = GameObject.FindObjectOfType<Paddle>();
 		paddleToBallVector = this.transform.position - paddle.transform.position;
 	}
 	
@@ -29,4 +29,15 @@ public class Ball : MonoBehaviour {
 			}
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		Vector3 tweak = new Vector3 (Random.Range(0f, 0.2f), Random.Range(0f, 0.2f), 0f);
+
+		if (hasStarted) {
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.Play();
+			Rigidbody.velocity += tweak;
+		}
+	}
 }
+	
